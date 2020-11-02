@@ -180,7 +180,6 @@ form.sign-up-form{
     left: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
 }
 .panels-container .panel{
     display: flex;
@@ -350,6 +349,73 @@ form.sign-up-form{
   }
   .container::before{
     bottom: 72%;
+    left: 52%;
+  }
+  .container.sign-up-mode::before{
+    bottom: 28%;
+    left: 50%;
+  }
+}
+@media only screen 
+  and (min-device-width: 360px) 
+  and (max-device-width: 640px) 
+  and (orientation: portrait) { 
+  .image{
+    display: none;
+  }
+  .panel .content{
+    padding: 0.5rem 1rem;
+  }
+  .panel .content p{
+    display: none;
+  }
+  .sign-up-form .social-text{
+    display: none;
+  }
+  .sign-up-form .sign-in-social-btn{
+    display: none;
+  }
+}
+
+@media only screen 
+  and (min-device-width: 411px) 
+  and (max-device-width: 700px)
+  and (orientation: portrait){    
+  .panel .content p{
+    display: block;
+  }
+  .sign-up-form .social-text{
+    display: none;
+  }
+  .sign-in-social-btn{
+    display: none;
+  }
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 740px) 
+  and (orientation: portrait){    
+  .panel .content p{
+    display: block;
+  }
+  .sign-up-form .social-text{
+    display: block;
+  }
+  .sign-in-social-btn{
+    display: block;
+  }
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px) 
+  and (orientation: portrait){    
+  .panel .content p{
+    display: none;
+  }
+  .container::before{
+    bottom: 90%;
     left: 52%;
   }
   .container.sign-up-mode::before{

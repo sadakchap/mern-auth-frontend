@@ -69,7 +69,7 @@ const Signup = ({ showToast, changeMode }) => {
                 </div>
                 <button type="submit" className="btn solid" disabled={loading}>Join us</button>
                 <p className="social-text">Or Sign in with email or Social platforms</p>
-                <button className="btn secondary" onClick={changeMode} >Sign In</button>
+                <button className="btn secondary sign-in-social-btn" onClick={changeMode} >Sign In</button>
             </form>
         </>
     )
