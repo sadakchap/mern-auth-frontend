@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
+import { useHistory } from 'react-router-dom';
 
 const ConfirmEmail = ({ match }) => {
 
     const [token, setToken] = useState('');
     const [loading, setLoading] = useState('');
+    const history = useHistory();
 
     useEffect(() => {
         const token = match.params.token;
@@ -24,8 +26,10 @@ const ConfirmEmail = ({ match }) => {
             .then(res => {
                 if(res.data.error) return toast.error(res.data.error)
                 setToken('')
-                return toast.success(res.data.message);
-                //TODO: redirect to login page
+                toast.success(res.data.message);
+                setInterval(() => {
+                    history.push('/')
+                }, 2000);
             })
             .catch(err => {
                 if(err?.response?.data.error) return toast.error(err.response.data.error);
