@@ -378,23 +378,6 @@ form.sign-up-form{
 }
 
 @media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px) 
-  and (orientation: portrait){    
-  .panel .content p{
-    display: none;
-  }
-  .container::before{
-    bottom: 90%;
-    left: 52%;
-  }
-  .container.sign-up-mode::before{
-    bottom: 28%;
-    left: 50%;
-  }
-}
-
-@media only screen 
   and (min-device-width: 411px) 
   and (max-device-width: 700px)
   and (orientation: portrait){    
